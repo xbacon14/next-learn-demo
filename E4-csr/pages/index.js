@@ -1,6 +1,6 @@
 import Layout from '../components/MyLayout.js'
 import Link from 'next/link'
-import getShows from '../lib/shows.js'
+import { getShows } from '../lib/shows.js'
 
 const Index = props => (
   <Layout>

@@ -1,5 +1,5 @@
-import Layout from '../../components/MyLayout';
-import getShows from '../../lib/shows';
+import Layout from '../../components/MyLayout'
+import { getShows } from '../../lib/shows'
 
 const Post = props => (
   <Layout>
@@ -7,13 +7,13 @@ const Post = props => (
     <p>{props.show.summary.replace(/<[/]?p>/g, '')}</p>
     <img src={props.show.image.medium} />
   </Layout>
-);
+)
 
 Post.getInitialProps = async context => {
-  const { id } = context.query;
+  const { id } = context.query
   const show = await getShows(context.query.id)
 
-  return { show };
-};
+  return { show }
+}
 
-export default Post;
+export default Post

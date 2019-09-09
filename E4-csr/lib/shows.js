@@ -1,6 +1,6 @@
 import fetch from 'isomorphic-unfetch'
 
-export default async function getShows(id) {
+export async function getShows(id) {
   if (id) {
     const res = await fetch(`https://api.tvmaze.com/shows/${id}`)
     const show = await res.json()
