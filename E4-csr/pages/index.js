@@ -1,6 +1,5 @@
 import Layout from '../components/MyLayout.js'
 import Link from 'next/link'
-import fetch from 'isomorphic-unfetch'
 import getShows from '../lib/shows.js'
 
 const Index = props => (

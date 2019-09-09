@@ -1,5 +1,4 @@
 import Layout from '../../components/MyLayout';
-import fetch from 'isomorphic-unfetch';
 import getShows from '../../lib/shows';
 
 const Post = props => (
