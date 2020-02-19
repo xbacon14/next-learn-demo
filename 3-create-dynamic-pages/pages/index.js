@@ -1,9 +1,23 @@
 import Layout from '../components/MyLayout.js'
+import Link from 'next/link'
 
-export default function Index() {
+const PostLink = props => (
+  <li>
+    <Link href={`/post?title=${props.title}`}>
+      <a>{props.title}</a>
+    </Link>
+  </li>
+);
+
+export default function Blog(){
   return (
     <Layout>
-      <p>Hello Next.js</p>
+      <h1>Italus Blog</h1>
+      <ul>
+        <PostLink title="Hello next.js" />
+        <PostLink title="Hello next.js is awesome" />
+        <PostLink title="Deploy apps with zeit" />
+      </ul>
     </Layout>
-  )
+  );
 }
